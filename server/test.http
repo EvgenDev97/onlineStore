@@ -1,0 +1,11 @@
+POST http://localhost:5000/api/type
+Content-Type: application/json
+
+{
+  "name": "laptop samsung"
+}
+
+
+###
+GET localhost:5000/api/type
+
