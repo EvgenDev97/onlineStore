@@ -69,10 +69,10 @@ Device.belongsTo(Brand)
 Device.hasMany(Rating)
 Rating.belongsTo(Device)
 
-Device.hasMany(BasketDevice)
+Device.hasMany(BasketDevice )
 BasketDevice.belongsTo(Device)
 
-Device.hasMany(DeviceInfo)
+Device.hasMany(DeviceInfo, {as:'info'})
 DeviceInfo.belongsTo(Device)
 //We established a Many-to-Many relationship between Brand && type using the TypeBrand
 Type.belongsToMany(Brand, {through: TypeBrand})
