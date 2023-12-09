@@ -9,3 +9,12 @@ Content-Type: application/json
 ###
 GET localhost:5000/api/type
 
+###
+POST http://localhost:5000/api/user/registration
+Content-Type: application/json
+
+{
+  "email": "sobaka@gmail.ru",
+  "password": "yalublusobak",
+  "role": "zoofil"
+}

@@ -12,11 +12,14 @@ const errorHandler = require('./middleware/ErrorHandlerMiddleWare')
 const path = require('path')
 
 
+
+
+
 const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.static(path.resolve(__dirname, "static")))
-app.use(fileUpload({}))
+app.use(fileUpload({})) //
 app.use('/api', router)
 app.use(errorHandler)
 const start = async ()=>{

@@ -6,7 +6,7 @@ class DeviceController{
     async create(req,res, next){
         try{
             let {name,price,brandId,typeId, info} = req.body
-            console.log(req.files)
+
             const {img} = req.files
             let fileName =  uuid.v4() + ".jpg"
             await img.mv(path.resolve(__dirname, "..", "static", fileName))
